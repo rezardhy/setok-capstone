@@ -6,9 +6,6 @@ import { nanoid } from "nanoid";
 const Profil = {
     async render() {
       return `
-
-     
-
       <div class="jumbotron mt-5">
         <div class="container"> <h1>Profil</h1>
           <hr class="my-4">
@@ -51,11 +48,6 @@ const Profil = {
               <td id="rekorNow"></td>
             </tr>
 
-            <tr>
-              <th scope="row">Umur</th>
-              <td> : </td>
-              <td id="umur"></td>
-            </tr>
             
           </tbody>
         </table>
@@ -69,7 +61,7 @@ const Profil = {
                 <h3 id="tanggal"></h3>
                 
                 <div id="button">
-                  <h4>Apakah pengguna merokok pada hari ini?</h4>
+                  <h4>Apakah pengguna tidak merokok pada hari ini?</h4>
                   <button id="addCount" class="btn btn-primary">Ya</button>
                   <button id="resetCount"  class="btn btn-primary">Tidak</button>
                 </div>
@@ -92,7 +84,7 @@ const Profil = {
 
               <div class="form-group">
                 <label >Isi Cerita</label>
-                <textarea class="form-control" id="isi" placeholder="Isi dengan cerita pengalam buruk meroko atau tips berehnti merokok" required></textarea>
+                <textarea class="form-control" id="isi" placeholder="Isi dengan cerita pengalam buruk merokok atau tips berehnti merokok" required></textarea>
               </div>
               <button id="sendStory" class="btn btn-primary">Kirim</button>
 
@@ -106,7 +98,10 @@ const Profil = {
     async afterRender() {
       // Fungsi ini akan dipanggil setelah render()
 
-      const idForum = nanoid(16);
+      
+
+      try {
+        const idForum = nanoid(16);
       let user1 = '';
 
       let nama = "";
@@ -248,8 +243,12 @@ const Profil = {
               });
       
         })
+      } catch (error) {
+        
+      }
 
-    },//
+
+    },
 
   
 

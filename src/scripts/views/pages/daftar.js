@@ -54,7 +54,9 @@ const Daftar = {
     },
    
     async afterRender() {
-        document.getElementById('page-top').style.display = "block";
+
+        try {
+            document.getElementById('page-top').style.display = "block";
         document.getElementById('loader').style.display = "none";
         signIn.addEventListener('click',(e)=>{
             document.getElementById('loader').style.display = "block";
@@ -98,6 +100,9 @@ const Daftar = {
                 // ..
             });
         })
+        } catch (error) {
+            
+        }
 
 
 

@@ -28,7 +28,8 @@ const Forum = {
     async afterRender() {
 
       // Fungsi ini akan dipanggil setelah render()
-      document.getElementById("page-top").style.display="block";
+      try {
+        document.getElementById("page-top").style.display="block";
       const forum = document.querySelector('#kontenforum');
       const datas = [{}];
       datas.shift();
@@ -78,6 +79,9 @@ const Forum = {
                 });
         
           })
+      } catch (error) {
+        
+      }
   
     
 

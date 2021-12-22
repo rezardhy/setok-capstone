@@ -99,7 +99,8 @@ const Home = {
     async afterRender() {
       // Fungsi ini akan dipanggil setelah render()
 
-      const artikel = await ArtikelSource.articles();
+      try {
+        const artikel = await ArtikelSource.articles();
       const artikelContainer = document.querySelector('#kontenartikel');
       const leaderboardRow = document.querySelector('#peringkat');
       const datas = [{}];
@@ -160,6 +161,9 @@ const Home = {
             });
     
       })
+      } catch (error) {
+        
+      }
       
       
       
