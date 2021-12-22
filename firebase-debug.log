@@ -1,0 +1,43 @@
+[debug] [2021-12-22T18:09:37.247Z] ----------------------------------------------------------------------
+[debug] [2021-12-22T18:09:37.250Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-12-22T18:09:37.251Z] CLI Version:   10.0.1
+[debug] [2021-12-22T18:09:37.251Z] Platform:      win32
+[debug] [2021-12-22T18:09:37.251Z] Node Version:  v14.18.1
+[debug] [2021-12-22T18:09:37.252Z] Time:          Thu Dec 23 2021 01:09:37 GMT+0700 (Western Indonesia Time)
+[debug] [2021-12-22T18:09:37.253Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-22T18:09:37.260Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-22T18:09:37.260Z] > authorizing via signed-in user (rezardhiansyah19@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\setok-capstone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-12-22T18:09:44.862Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-12-22T18:09:45.481Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-12-22T18:09:45.482Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project setok-89624 (SETOK) 
+[debug] [2021-12-22T18:09:46.965Z] Error: EBUSY: resource busy or locked, rename 'C:\Users\HP\.config\configstore\firebase-tools.json.3117585056' -> 'C:\Users\HP\.config\configstore\firebase-tools.json'
+    at Object.renameSync (fs.js:797:3)
+    at Function.writeFileSync [as sync] (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\write-file-atomic\index.js:244:8)
+    at Configstore.set all [as all] (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\configstore\index.js:61:20)
+    at Configstore.set (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\configstore\index.js:91:12)
+    at Object.makeActiveProject (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:178:31)
+    at Object.doSetup [as project] (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:99:11)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async init (C:\Users\HP\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:19:9)
+[error] 
+[error] Error: An unexpected error has occurred.
